@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
-@RequestMapping("test")
+@RequestMapping("/test")
 public class TestController {
 
 
@@ -16,5 +16,11 @@ public class TestController {
     public String sendMsg(@PathVariable("message") String message) {
         log.info("客户端发送消息:{}", message);
         return message;
+    }
+
+    @GetMapping("/haha")
+    public String haha() {
+        log.info("hahahahahahaha");
+        return "hahahahahahaha";
     }
 }
